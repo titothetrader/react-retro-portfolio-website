@@ -1,0 +1,132 @@
+header {
+  height: 135vh;
+  overflow: hidden;
+}
+
+.header__container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+  padding-top: 5rem;
+  margin: 0;
+}
+
+.header__logo {
+  width: 9rem;
+  margin: 0 auto 2rem;
+}
+
+.header__container img {
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
+.header__container img:hover {
+  filter: brightness(150%);
+  opacity: 0.8;
+  -webkit-filter: drop-shadow(5px 5px 5px rgb(56, 55, 106));
+  filter: drop-shadow(5px 5px 5px rgb(56, 55, 106));
+}
+
+.header__gradient {
+  width: 100%;
+  background: linear-gradient(var(--color-bg), transparent);
+}
+
+/* ============= CTA ============= */
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.mobile-only {
+  display: none;
+  margin-top: 2.5rem;
+}
+
+.mobile-only a {
+  background: var(--color-bg-variant);
+  color: var(--color-white);
+  width: 17.5rem;
+}
+
+.mobile-only a:hover {
+  background: var(--color-white);
+  color: var(--color-bg);
+}
+
+/* ============= HEADER SOCIALS ============= */
+.header__socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 2rem;
+  bottom: 3rem;
+}
+
+/* Styled vertical LINE under socials  */
+.header__socials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+
+/* ============= SCROLL DOWN ============= */
+.scroll__down {
+  position: absolute;
+  right: 1rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+/* ============= ME ============= */
+.me {
+  /* background: var(--color-primary); */
+  background: linear-gradient(var(--color-primary), transparent);
+  width: 22rem;
+  height: 25rem;
+  position: absolute;
+  left: calc(
+    50% - 11rem
+  ); /* Calculate half of page and subtract half the WIDTH */
+  margin-top: 4rem;
+  border-radius: 12rem 12rem 0 0;
+  overflow: hidden;
+  padding: 3rem 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.me-img {
+  width: 100%;
+}
+
+/* ================== MEDIA QUERIES (MEDIUM DEVICES) ================== */
+@media screen and (max-width: 1024px) {
+  .header__logo {
+    width: 7rem;
+  }
+}
+
+/* ================== MEDIA QUERIES (SMALL DEVICES) ================== */
+@media screen and (max-width: 600px) {
+  .header__logo {
+    width: 5rem;
+  }
+  .header__socials,
+  .scroll__down {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+    margin-top: 2.5rem;
+  }
+}

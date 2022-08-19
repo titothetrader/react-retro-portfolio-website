@@ -1,0 +1,19 @@
+RUN:
+
+Start the app on http://localhost:3000:
+npm start
+
+
+To Run Build:
+1) Edit "package.json" and add homepage URL:
+...
+	"name": "react-portfolio-website";
+	"homepage": "https://titosanchez.x",
+	"version": "0.1.0",
+...
+
+2) Run build command:
+npm run build
+
+3) Zip & copy contents of "[project]/build" folder
+4) Unzip & upload to server site location inside "public_html" folder

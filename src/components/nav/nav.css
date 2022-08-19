@@ -1,0 +1,40 @@
+nav {
+  background: rgba(0, 0, 0, 0.3); /* black with some transparency */
+  width: max-content;
+  display: block;
+  padding: 0.7rem 1.7rem;
+  z-index: 2;
+  position: fixed; /* this and "bottom" make sure it is always visible in the same spot */
+  bottom: 2rem;
+  display: flex;
+  gap: 0.8rem;
+  left: 50%; /* Center halfway along total display width */
+  transform: translateX(
+    -50%
+  ); /* Further center to half of width of nav element */
+  border-radius: 3rem;
+  backdrop-filter: blur(15px);
+}
+
+nav a {
+  background: transparent;
+  padding: 0.9rem;
+  border-radius: 50%; /* To add radius to specific icon */
+  display: flex;
+  color: var(--color-light);
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  background: var(--color-primary-variant);
+}
+
+nav a.active {
+  background: var(--color-primary);
+  color: var(--color-light);
+}
+
+nav a.active:hover {
+  background: var(--color-primary-variant);
+  color: var(--color-light);
+}
